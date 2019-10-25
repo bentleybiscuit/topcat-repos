@@ -12,14 +12,9 @@ fetch('https://api.github.com/search/repositories?q=language:javascript&sort=sta
         })
     })
 
-// for (int i = 0; i < top3.length; i++) {
-//     [i]++;
-
 function displayData(repo) {
-    var contentArea = document.querySelector('.repo')
-    contentArea.innerHTML = '<h3>Name: ' + repo.name + '</h3>'
-    contentArea.innerHTML += '<h3>Description: ' + repo.description + '</h3>'
-    contentArea.innerHTML += '<h3>Stargazers count: ' + repo.stargazers_count + '</h3>'
+    var contentArea = document.querySelector('.container')
+    contentArea.innerHTML += '<div class="repo"> <h3>Name: ' + repo.name + '</h3><h3>Description: ' + repo.description + '</h3><h3>Stargazers count: ' + repo.stargazers_count + '</h3> </div>'
 }
 
 
